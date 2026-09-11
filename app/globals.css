@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-outfit: 'Outfit', system-ui, -apple-system, sans-serif;
+  --bgm-blue: #024E7E;
+  --bgm-blue-dark: #024E7E;
+  --bgm-gold: #CA9625;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  body {
+    background-color: #F8FAFC;
+    color: #0F172A;
+    font-family: var(--font-inter);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Luminous Light Design System */
+.bg-grid-pattern-light {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(2, 78, 126, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(2, 78, 126, 0.04) 1px, transparent 1px);
+}
+
+.eyebrow-badge-light {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  background-color: rgba(202, 150, 37, 0.12);
+  border: 1px solid rgba(202, 150, 37, 0.35);
+  color: #946A10;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.card-light-premium {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px -2px rgba(2, 78, 126, 0.06);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-light-premium:hover {
+  transform: translateY(-5px);
+  border-color: #CA9625;
+  box-shadow: 0 20px 35px -10px rgba(2, 78, 126, 0.15), 0 0 15px -3px rgba(202, 150, 37, 0.2);
+}
+
+.btn-sunset-gradient {
+  background: linear-gradient(135deg, #E8B94B 0%, #CA9625 50%, #A3771B 100%);
+  color: #024E7E;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-sunset-gradient:hover {
+  background: linear-gradient(135deg, #FFF0C7 0%, #E8B94B 50%, #CA9625 100%);
+  box-shadow: 0 10px 25px -4px rgba(202, 150, 37, 0.4);
+  transform: scale(1.02);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #B58017 0%, #CA9625 50%, #8A610A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blue-gradient-bg {
+  background: linear-gradient(135deg, #024E7E 0%, #024E7E 60%, #0368A8 100%);
+}

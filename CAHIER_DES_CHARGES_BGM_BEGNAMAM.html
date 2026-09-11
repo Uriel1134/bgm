@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cahier des Charges — BGM Begnamam (Libreville, Gabon)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bgm-blue: #0F4C81;
+      --bgm-blue-dark: #082947;
+      --bgm-gold: #C59B27;
+      --bgm-gold-light: #E8C868;
+      --text-dark: #1E293B;
+      --bg-light: #F8FAFC;
+      --border-color: #E2E8F0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background-color: #F1F5F9;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .document-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #FFFFFF;
+      padding: 3rem 4rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      border: 1px solid var(--border-color);
+    }
+
+    /* Cover Header */
+    .cover-header {
+      border-bottom: 4px solid var(--bgm-gold);
+      padding-bottom: 2rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-svg {
+      width: 60px;
+      height: 65px;
+    }
+
+    .brand-text h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--bgm-blue-dark);
+      line-height: 1;
+    }
+
+    .brand-text p {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--bgm-gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .doc-meta-badge {
+      text-align: right;
+      font-size: 0.85rem;
+      color: #64748B;
+    }
+
+    .doc-meta-badge .version-pill {
+      display: inline-block;
+      background-color: var(--bgm-blue-dark);
+      color: #FFFFFF;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.75rem;
+      margin-bottom: 6px;
+    }
+
+    .doc-title-box {
+      background: linear-gradient(135deg, #082947 0%, #0F4C81 100%);
+      color: #FFFFFF;
+      padding: 2rem;
+      border-radius: 10px;
+      margin-bottom: 2.5rem;
+      border-left: 6px solid var(--bgm-gold);
+      box-shadow: 0 6px 15px rgba(15, 76, 129, 0.2);
+    }
+
+    .doc-title-box h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      color: #FFFFFF;
+    }
+
+    .doc-title-box p {
+      font-size: 1rem;
+      color: var(--bgm-gold-light);
+      font-weight: 500;
+    }
+
+    /* Enterprise info grid */
+    .company-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      background-color: var(--bg-light);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 3rem;
+    }
+
+    .info-item label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #64748B;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .info-item span {
+      font-weight: 700;
+      color: var(--bgm-blue-dark);
+      font-size: 0.95rem;
+    }
+
+    /* Headings */
+    h2.section-heading {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.4rem;
+      color: var(--bgm-blue-dark);
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 0.5rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    h2.section-heading::before {
+      content: '';
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background-color: var(--bgm-gold);
+      border-radius: 2px;
+    }
+
+    h3.sub-heading {
+      font-size: 1.1rem;
+      color: var(--bgm-blue);
+      margin-top: 1.5rem;
+      margin-bottom: 0.6rem;
+    }
+
+    /* CEO Quote Box */
+    .ceo-quote-box {
+      background: #FFFDF5;
+      border: 1px solid #FCD34D;
+      border-left: 5px solid var(--bgm-gold);
+      padding: 1.8rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+      position: relative;
+    }
+
+    .ceo-quote-box blockquote {
+      font-style: italic;
+      color: #334155;
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    .ceo-quote-box .author {
+      margin-top: 1rem;
+      font-weight: 800;
+      color: var(--bgm-blue-dark);
+      font-style: normal;
+      font-size: 0.9rem;
+      text-align: right;
+    }
+
+    /* Grid cards */
+    .four-pillars {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .pillar-card {
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.2rem;
+      background: #FFFFFF;
+      transition: all 0.2s;
+    }
+
+    .pillar-card h4 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      color: var(--bgm-blue-dark);
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .pillar-card h4 span {
+      background-color: rgba(197, 155, 39, 0.15);
+      color: var(--bgm-gold);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    .pillar-card p {
+      font-size: 0.85rem;
+      color: #64748B;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+
+    th, td {
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    th {
+      background-color: var(--bgm-blue-dark);
+      color: #FFFFFF;
+      font-weight: 700;
+    }
+
+    tr:nth-child(even) {
+      background-color: var(--bg-light);
+    }
+
+    .tech-pill {
+      display: inline-block;
+      background-color: #E2E8F0;
+      color: #1E293B;
+      font-weight: 600;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: 4px;
+    }
+
+    .footer-doc {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border-color);
+      text-align: center;
+      font-size: 0.8rem;
+      color: #94A3B8;
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background: #FFFFFF;
+        padding: 0;
+      }
+      .document-container {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="document-container">
+
+    <!-- Header Section -->
+    <header class="cover-header">
+      <div class="brand-logo">
+        <svg class="logo-svg" viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100 10 L180 55 L180 115 L160 103 L160 67 L100 32 L40 67 L40 103 L20 115 L20 55 Z" fill="#0F4C81"/>
+          <path d="M100 45 L155 77 L155 160 L135 172 L135 90 L100 68 L65 90 L65 172 L45 160 L45 77 Z" fill="#C59B27"/>
+          <path d="M100 80 L135 102 L135 205 L112 192 L112 120 L100 110 L88 120 L88 192 L65 205 L65 102 Z" fill="#0F4C81"/>
+        </svg>
+        <div class="brand-text">
+          <h1>BGM</h1>
+          <p>BEGNAMAM</p>
+        </div>
+      </div>
+      <div class="doc-meta-badge">
+        <div><span class="version-pill">DOCUMENT OFFICIEL</span></div>
+        <div><strong>Version :</strong> 1.1 (Calendrier Daté)</div>
+        <div><strong>Livraison Finale :</strong> 12 Septembre 2026</div>
+      </div>
+    </header>
+
+    <!-- Document Main Title -->
+    <div class="doc-title-box">
+      <h2>CAHIER DES CHARGES FONCTIONNEL & TECHNIQUE</h2>
+      <p>Projet de Création du Site Web Vitrine, Portfolio & Catalogue Immobilier Next.js</p>
+    </div>
+
+    <!-- Company Meta -->
+    <div class="company-grid">
+      <div class="info-item">
+        <label>Raison Sociale</label>
+        <span>BGM ("Begnamam")</span>
+      </div>
+      <div class="info-item">
+        <label>Domaines d'Intervention</label>
+        <span>Études, Conception, Construction & Promotion Immobilière</span>
+      </div>
+      <div class="info-item">
+        <label>Siège Social Officiel</label>
+        <span>Lalala à droite, BP 15 406 — Libreville (Gabon)</span>
+      </div>
+      <div class="info-item">
+        <label>Échéance de Livraison Impérative</label>
+        <span>Samedi 12 Septembre 2026</span>
+      </div>
+    </div>
+
+    <!-- 1. Présentation Institutionnelle -->
+    <h2 class="section-heading">1. PRÉSENTATION INSTITUTIONNELLE</h2>
+
+    <h3 class="sub-heading">1.1 Mot du PDG / Direction Générale</h3>
+    <div class="ceo-quote-box">
+      <blockquote>
+        "Chez <strong>BGM (Begnamam)</strong>, nous sommes animés par une conviction forte : bâtir est un acte d'engagement durable envers l'avenir. Notre mission va bien au-delà de la simple construction d'édifices : nous concevons des cadres de vie harmonieux, modernes et pérennes pour les familles, les professionnels et les investisseurs au Gabon.<br><br>
+        Qu'il s'agisse d'une étude technique rigoureuse, d'une modélisation architecturale 3D audacieuse, de la réalisation de chantiers complexes ou de la promotion de villas clés en main, nos équipes s'investissent avec passion, professionnalisme et respect strict des normes de sécurité.<br><br>
+        Ce site web vitrine constitue la vitrine numérique de notre savoir-faire. Il témoigne de notre exigence de qualité, de notre rigueur et de notre passion d'accompagner chaque client dans la concrétisation de son rêve immobilier."
+      </blockquote>
+      <div class="author">— La Direction Générale, BGM Begnamam</div>
+    </div>
+
+    <h3 class="sub-heading">1.2 Vision & Mission</h3>
+    <p><strong>🎯 Notre Mission :</strong> Offrir des prestations clés en main d'excellence au Gabon à travers une ingénierie d'études poussée, une conception architecturale 2D/3D sur-mesure, des chantiers BTP durables et une promotion immobilière sécurisée (villas et terrains avec titre foncier).</p>
+    <p style="margin-top: 8px;"><strong>👁️ Notre Vision :</strong> Devenir le leader et la référence incontournable au Gabon et en Afrique Centrale dans le secteur du bâtiment, de l'architecture moderne et de la promotion immobilière haut de gamme.</p>
+
+    <h3 class="sub-heading">1.3 Les 4 Piliers d'Activité (Issus de l'enseigne)</h3>
+    <div class="four-pillars">
+      <div class="pillar-card">
+        <h4><span>1</span> ÉTUDES</h4>
+        <p>Études de faisabilité, études de sol et structures, conseils techniques, dossiers de permis de construire.</p>
+      </div>
+      <div class="pillar-card">
+        <h4><span>2</span> CONCEPTION</h4>
+        <p>Conception architecturale 2D, modélisation 3D, maquettes virtuelles, aménagement intérieur et paysager.</p>
+      </div>
+      <div class="pillar-card">
+        <h4><span>3</span> CONSTRUCTION</h4>
+        <p>Travaux de BTP, gros œuvre, second œuvre, rénovation lourde et réalisation d'ouvrages clés en main.</p>
+      </div>
+      <div class="pillar-card">
+        <h4><span>4</span> PROMOTION IMMOBILIÈRE</h4>
+        <p>Vente de villas contemporaines, duplex, résidences de standing et parcelles de terrains aménagées.</p>
+      </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- 2. Objectifs du Projet -->
+    <h2 class="section-heading">2. OBJECTIFS DU SITE WEB</h2>
+    <ul style="margin-left: 1.5rem; margin-top: 0.5rem; font-size: 0.95rem;">
+      <li><strong>Positionnement de Marque :</strong> Établir une image de marque prestige, solide et digne des plus grands cabinets d'architecture.</li>
+      <li><strong>Catalogue Immobilier Interactif :</strong> Présenter les villas disponibles à la vente, les projets 3D et les réalisations livrées.</li>
+      <li><strong>Outil d'Estimation & Devis :</strong> Proposer un simulateur pas-à-pas permettant aux clients d'estimer leur projet et d'envoyer leur demande directement.</li>
+      <li><strong>Accessibilité Directe :</strong> Fournir un lien direct avec l'équipe commerciale BGM (WhatsApp, Téléphone +241 077 16 76 07, Adresse Siège Lalala à droite).</li>
+    </ul>
+
+    <!-- 3. Charte Graphique -->
+    <h2 class="section-heading">3. CHARTE GRAPHIQUE & DESIGN SYSTEM</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Élément</th>
+          <th>Valeur Hex / Code</th>
+          <th>Usage & Signification</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Bleu Marine BGM</strong></td>
+          <td><code>#0F4C81</code> / <code>#082947</code></td>
+          <td>Couleur dominante (Rigueur, Confiance, Solidité BTP)</td>
+        </tr>
+        <tr>
+          <td><strong>Or Chaud BGM</strong></td>
+          <td><code>#C59B27</code> / <code>#D4AF37</code></td>
+          <td>Couleur d'accent (Architecture, Prestige, Excellence)</td>
+        </tr>
+        <tr>
+          <td><strong>Anthracite & Slate</strong></td>
+          <td><code>#0F172A</code> / <code>#1E293B</code></td>
+          <td>Fonds sombres et cartes glassmorphism luxe</td>
+        </tr>
+        <tr>
+          <td><strong>Typographies</strong></td>
+          <td>Outfit & Inter</td>
+          <td>Titres modernes et corps de texte ultra-lisible</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 4. Arborescence & Fonctionnalités -->
+    <h2 class="section-heading">4. ARBORESCENCE & SPÉCIFICATIONS DES PAGES</h2>
+    <ol style="margin-left: 1.5rem; font-size: 0.95rem;">
+      <li><strong>Page d'Accueil (<code>/</code>) :</strong> Hero Section avec rendu 3D, chiffres clés, résumé du Mot du PDG, les 4 métiers, aperçu des villas et formulaire d'action.</li>
+      <li><strong>Page À Propos (<code>/a-propos</code>) :</strong> Présentation institutionnelle, message complet de la Direction, Vision & Mission.</li>
+      <li><strong>Page Nos Services (<code>/services</code>) :</strong> Détaillant les 4 offres d'études, conception, BTP et promotion immobilière.</li>
+      <li><strong>Page Catalogue & Projets (<code>/projets</code>) :</strong> Catalogue interactif avec filtres (*Résidentiel, Plans 3D, Terrains, Livrés*) et fiches projets détaillées.</li>
+      <li><strong>Page Estimation & Devis (<code>/estimation</code>) :</strong> Formulaire interactif guidé en 4 étapes pour chiffrer un projet de construction ou d'achat.</li>
+      <li><strong>Page Contact (<code>/contact</code>) :</strong> Siège Lalala à droite, BP 15 406 - Libreville (Gabon), Téléphone direct (+241) 077 16 76 07, formulaire et carte.</li>
+    </ol>
+
+    <!-- 5. Spécifications Techniques -->
+    <h2 class="section-heading">5. SPÉCIFICATIONS TECHNIQUES</h2>
+    <p>
+      <span class="tech-pill">Next.js 14+</span>
+      <span class="tech-pill">React 18/19</span>
+      <span class="tech-pill">TypeScript</span>
+      <span class="tech-pill">Tailwind CSS</span>
+      <span class="tech-pill">Lucide Icons</span>
+      <span class="tech-pill">SEO Schema.org</span>
+    </p>
+
+    <!-- 6. Planning de Livraison Daté jusqu'au 12 Septembre -->
+    <h2 class="section-heading">6. CALENDRIER DÉTAILLÉ DE LIVRAISON (29 AOÛT - 12 SEPTEMBRE 2026)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Phase</th>
+          <th>Intitulé de la Phase</th>
+          <th>Période d'Exécution</th>
+          <th>Livrable Officiel</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Phase 1</strong></td>
+          <td>Cahier des Charges & Spécifications</td>
+          <td><strong>29 Août – 31 Août 2026</strong></td>
+          <td>Document Officiel Validé (PDF & HTML)</td>
+        </tr>
+        <tr>
+          <td><strong>Phase 2</strong></td>
+          <td>Socle Next.js & UI System BGM</td>
+          <td><strong>1er Sept – 3 Sept 2026</strong></td>
+          <td>Code source Next.js, Header, Footer & Charte Graphique</td>
+        </tr>
+        <tr>
+          <td><strong>Phase 3</strong></td>
+          <td>Pages Institutionnelles & 4 Métiers</td>
+          <td><strong>4 Sept – 7 Sept 2026</strong></td>
+          <td>Page d'Accueil, À Propos (Mot du PDG), 4 Piliers</td>
+        </tr>
+        <tr>
+          <td><strong>Phase 4</strong></td>
+          <td>Catalogue Immobilier & Simulateur</td>
+          <td><strong>8 Sept – 10 Sept 2026</strong></td>
+          <td>Système de filtres villas/projets + Formulaire de devis</td>
+        </tr>
+        <tr>
+          <td><strong>Phase 5</strong></td>
+          <td>Recette, SEO & Publication Officielle</td>
+          <td><strong>11 Sept – 12 Sept 2026</strong></td>
+          <td><strong>Livraison finale & Mise en ligne le 12 Septembre</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <footer class="footer-doc">
+      <p>© 2026 BGM Begnamam — Siège: Lalala à droite, BP 15 406 - Libreville (Gabon) | Tél: (+241) 077 16 76 07</p>
+      <p>Livraison du projet Web fixée impérativement au 12 Septembre 2026</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
