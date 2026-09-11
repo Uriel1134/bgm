@@ -173,11 +173,12 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-[#024E7E] flex items-center gap-1.5">
+                    <label htmlFor="contact-name" className="text-xs font-bold text-[#024E7E] flex items-center gap-1.5">
                       <User className="w-3.5 h-3.5 text-[#CA9625]" />
                       <span>Nom & Prénom *</span>
                     </label>
                     <input
+                      id="contact-name"
                       type="text"
                       required
                       placeholder="Ex: Jean Dupont"
@@ -188,11 +189,12 @@ export default function ContactPage() {
                   </div>
 
                   <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-[#024E7E] flex items-center gap-1.5">
+                    <label htmlFor="contact-phone" className="text-xs font-bold text-[#024E7E] flex items-center gap-1.5">
                       <Phone className="w-3.5 h-3.5 text-[#CA9625]" />
                       <span>Téléphone / WhatsApp *</span>
                     </label>
                     <input
+                      id="contact-phone"
                       type="tel"
                       required
                       placeholder="Ex: (+241) 077 16 76 07"
@@ -205,11 +207,12 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-[#024E7E] flex items-center gap-1.5">
+                    <label htmlFor="contact-email" className="text-xs font-bold text-[#024E7E] flex items-center gap-1.5">
                       <Mail className="w-3.5 h-3.5 text-[#CA9625]" />
                       <span>Adresse E-mail</span>
                     </label>
                     <input
+                      id="contact-email"
                       type="email"
                       placeholder="Ex: jean.dupont@gmail.com"
                       value={formData.email}
@@ -219,11 +222,12 @@ export default function ContactPage() {
                   </div>
 
                   <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-[#024E7E] flex items-center gap-1.5">
+                    <label htmlFor="contact-service" className="text-xs font-bold text-[#024E7E] flex items-center gap-1.5">
                       <Building2 className="w-3.5 h-3.5 text-[#CA9625]" />
                       <span>Service Concerné</span>
                     </label>
                     <select
+                      id="contact-service"
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                       className="w-full bg-slate-50 border border-slate-300 focus:bg-white rounded-2xl px-4 py-3.5 text-sm text-slate-800 focus:outline-none focus:border-[#024E7E] focus:ring-2 focus:ring-[#024E7E]/10 shadow-sm transition-all"
@@ -239,11 +243,12 @@ export default function ContactPage() {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-[#024E7E] flex items-center gap-1.5">
+                  <label htmlFor="contact-message" className="text-xs font-bold text-[#024E7E] flex items-center gap-1.5">
                     <FileText className="w-3.5 h-3.5 text-[#CA9625]" />
                     <span>Détails de votre projet ou Message *</span>
                   </label>
                   <textarea
+                    id="contact-message"
                     rows={5}
                     required
                     placeholder="Décrivez votre besoin (type de terrain, superficie souhaitée, délai, budget estimé...)"

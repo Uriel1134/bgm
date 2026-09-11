@@ -1071,8 +1071,9 @@ export default function HomePage() {
                 >
                   <div className="space-y-3">
                     <div className="space-y-1">
-                      <label className="text-[11px] font-bold text-slate-300 block">Nom complet *</label>
+                      <label htmlFor="apt-name" className="text-[11px] font-bold text-slate-300 block">Nom complet *</label>
                       <input
+                        id="apt-name"
                         type="text"
                         name="name"
                         required
@@ -1082,8 +1083,9 @@ export default function HomePage() {
                     </div>
 
                     <div className="space-y-1">
-                      <label className="text-[11px] font-bold text-slate-300 block">Téléphone / WhatsApp *</label>
+                      <label htmlFor="apt-phone" className="text-[11px] font-bold text-slate-300 block">Téléphone / WhatsApp *</label>
                       <input
+                        id="apt-phone"
                         type="tel"
                         name="phone"
                         required
@@ -1093,8 +1095,9 @@ export default function HomePage() {
                     </div>
 
                     <div className="space-y-1">
-                      <label className="text-[11px] font-bold text-slate-300 block">Type de projet *</label>
+                      <label htmlFor="apt-project" className="text-[11px] font-bold text-slate-300 block">Type de projet *</label>
                       <select
+                        id="apt-project"
                         name="project"
                         className="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-[#CA9625] transition-colors"
                       >
@@ -1107,8 +1110,9 @@ export default function HomePage() {
                     </div>
 
                     <div className="space-y-1">
-                      <label className="text-[11px] font-bold text-slate-300 block">Message ou date souhaitée</label>
+                      <label htmlFor="apt-msg" className="text-[11px] font-bold text-slate-300 block">Message ou date souhaitée</label>
                       <textarea
+                        id="apt-msg"
                         name="msg"
                         rows={2}
                         placeholder="Précisez votre demande ou vos disponibilités..."
