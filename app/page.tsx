@@ -226,7 +226,7 @@ export default function HomePage() {
             </h1>
 
             <p className="text-base sm:text-lg text-slate-200 max-w-xl leading-relaxed">
-              <strong>BGM Ingénierie & Consulting</strong> — Votre partenaire de confiance : Conception • Études • Ingénierie • Construction TCE • VRD • Développement Immobilier.
+              <strong>BGM Ingénierie & Construction</strong> — Votre partenaire de confiance : Conception • Études • Ingénierie • Construction TCE • VRD • Développement Immobilier.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
@@ -429,14 +429,14 @@ export default function HomePage() {
 
               <blockquote className="text-sm sm:text-base text-slate-700 leading-relaxed italic border-l-4 border-[#CA9625] pl-4 space-y-3">
                 <p>
-                  &ldquo;Chez <strong>BGM Ingénierie & Consulting</strong>, nous mettons notre expertise au service de cadres de vie harmonieux, modernes et pérennes. De la conception à la réalisation, nos équipes apportent rigueur technique et excellence sur l&apos;ensemble du territoire gabonais.&rdquo;
+                  &ldquo;Chez <strong>BGM Ingénierie & Construction</strong>, nous mettons notre expertise au service de cadres de vie harmonieux, modernes et pérennes. De la conception à la réalisation, nos équipes apportent rigueur technique et excellence sur l&apos;ensemble du territoire gabonais.&rdquo;
                 </p>
               </blockquote>
 
               <div className="pt-4 flex items-center justify-between border-t border-slate-200">
                 <div>
                   <p className="font-bold text-[#024E7E] text-sm">La Direction Générale</p>
-                  <p className="text-xs text-[#CA9625] font-semibold">BGM Ingénierie & Consulting — Siège Lalala à droite, Libreville</p>
+                  <p className="text-xs text-[#CA9625] font-semibold">BGM Ingénierie & Construction — Siège Lalala à droite, Libreville</p>
                 </div>
                 <Link
                   href="/a-propos"

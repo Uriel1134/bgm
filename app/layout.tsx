@@ -4,11 +4,11 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "BGM Ingénierie & Consulting | De la conception à la réalisation",
+  title: "BGM Ingénierie & Construction | De la conception à la réalisation",
   description:
-    "BGM Ingénierie & Consulting — De la conception à la réalisation : Conception • Études • Ingénierie • Construction TCE • VRD • Développement Immobilier à Libreville, Gabon. Siège: Lalala à droite, BP 15 406 - Libreville. Tél: (+241) 077 16 76 07.",
+    "BGM Ingénierie & Construction — De la conception à la réalisation : Conception • Études • Ingénierie • Construction TCE • VRD • Développement Immobilier à Libreville, Gabon. Siège: Lalala à droite, BP 15 406 - Libreville. Tél: (+241) 077 16 76 07.",
   keywords: [
-    "BGM Ingénierie & Consulting",
+    "BGM Ingénierie & Construction",
     "BGM",
     "Begnamam",
     "Construction TCE Gabon",
@@ -19,12 +19,12 @@ export const metadata: Metadata = {
     "Études techniques bâtiment",
     "Lalala à droite Libreville"
   ],
-  authors: [{ name: "BGM Ingénierie & Consulting" }],
+  authors: [{ name: "BGM Ingénierie & Construction" }],
   openGraph: {
-    title: "BGM Ingénierie & Consulting — De la conception à la réalisation",
+    title: "BGM Ingénierie & Construction — De la conception à la réalisation",
     description: "Conception • Études • Ingénierie • Construction TCE • VRD • Développement Immobilier à Libreville, Gabon.",
     url: "https://bgm-begnamam.ga",
-    siteName: "BGM Ingénierie & Consulting",
+    siteName: "BGM Ingénierie & Construction",
     locale: "fr_GA",
     type: "website",
   },

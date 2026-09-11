@@ -21,7 +21,7 @@ export const BGMChatbot: React.FC = () => {
     {
       id: "1",
       sender: "bot",
-      text: "Bonjour ! Bienvenue chez BGM Ingénierie & Consulting. Je suis BegnaBot, votre assistant virtuel 24/7. Comment puis-je vous guider aujourd'hui ?",
+      text: "Bonjour ! Bienvenue chez BGM Ingénierie & Construction. Je suis BegnaBot, votre assistant virtuel 24/7. Comment puis-je vous guider aujourd'hui ?",
       options: [
         { label: "🏢 Vos 4 Métiers (Études, BTP, etc.)", action: "piliers" },
         { label: "🏡 Villas & Terrains à Vendre", action: "villas" },

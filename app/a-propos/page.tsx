@@ -29,7 +29,7 @@ export default function AboutPage() {
 
         <blockquote className="text-slate-700 text-base sm:text-lg leading-relaxed italic space-y-4 border-l-4 border-[#CA9625] pl-6">
           <p>
-            &ldquo;Chez <strong>BGM Ingénierie & Consulting</strong>, nous sommes animés par une conviction forte : bâtir est un acte d&apos;engagement durable envers l&apos;avenir. Notre mission va bien au-delà de la simple construction d&apos;édifices : nous concevons des cadres de vie harmonieux, modernes et pérennes pour les familles, les professionnels et les investisseurs au Gabon.&rdquo;
+            &ldquo;Chez <strong>BGM Ingénierie & Construction</strong>, nous sommes animés par une conviction forte : bâtir est un acte d&apos;engagement durable envers l&apos;avenir. Notre mission va bien au-delà de la simple construction d&apos;édifices : nous concevons des cadres de vie harmonieux, modernes et pérennes pour les familles, les professionnels et les investisseurs au Gabon.&rdquo;
           </p>
           <p>
             &ldquo;Qu&apos;il s&apos;agisse d&apos;une étude technique rigoureuse, d&apos;une modélisation architecturale 3D audacieuse, de la réalisation de chantiers complexes ou de la promotion de villas clés en main, nos équipes s&apos;investissent avec passion, professionnalisme et respect strict des normes de sécurité.&rdquo;
@@ -42,7 +42,7 @@ export default function AboutPage() {
         <div className="pt-4 flex items-center justify-between border-t border-slate-200">
           <div>
             <p className="font-bold text-[#024E7E] text-base">La Direction Générale</p>
-            <p className="text-xs text-[#CA9625] font-semibold">BGM Ingénierie & Consulting — Siège Lalala à droite, Libreville</p>
+            <p className="text-xs text-[#CA9625] font-semibold">BGM Ingénierie & Construction — Siège Lalala à droite, Libreville</p>
           </div>
           <a
             href="tel:+241077167607"

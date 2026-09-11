@@ -65,7 +65,7 @@ export const Footer: React.FC = () => {
             <BGMLogo size="lg" />
             <div className="space-y-1">
               <span className="text-xs font-black text-white uppercase tracking-wider block">
-                BGM Ingénierie & Consulting
+                BGM Ingénierie & Construction
               </span>
               <span className="text-[11px] font-extrabold text-[#CA9625] italic block">
                 « De la conception à la réalisation »
@@ -194,7 +194,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Copyright & Legal Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-xs text-slate-400 gap-4">
-          <p>© {new Date().getFullYear()} BGM Ingénierie & Consulting — De la conception à la réalisation. Libreville, Gabon.</p>
+          <p>© {new Date().getFullYear()} BGM Ingénierie & Construction — De la conception à la réalisation. Libreville, Gabon.</p>
           <div className="flex items-center gap-4">
             <Link href="/contact" className="hover:text-[#CA9625] transition-colors">
               Mentions Légales

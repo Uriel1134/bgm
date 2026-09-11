@@ -38,7 +38,7 @@ export default function ContactPage() {
         {/* Header Section */}
         <div className="text-center space-y-4 max-w-3xl mx-auto">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black font-heading text-[#024E7E] tracking-tight">
-            Contactez BGM Ingénierie & Consulting
+            Contactez BGM Ingénierie & Construction
           </h1>
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-medium">
             Nos équipes d&apos;ingénieurs, architectes et conseillers sont à votre entière disposition au siège social de Libreville ou par ligne directe.
@@ -55,7 +55,7 @@ export default function ContactPage() {
                   Siège Social & Coordonnées
                 </h2>
                 <p className="text-xs font-semibold text-[#CA9625]">
-                  BGM Ingénierie & Consulting — Libreville, Gabon
+                  BGM Ingénierie & Construction — Libreville, Gabon
                 </p>
               </div>
 
@@ -271,7 +271,7 @@ export default function ContactPage() {
                     Message Envoyé avec Succès !
                   </h2>
                   <p className="text-sm text-slate-600 max-w-md mx-auto leading-relaxed font-medium">
-                    Merci <span className="font-bold text-[#024E7E]">{formData.name || "cher client"}</span>. Un ingénieur de <strong>BGM Ingénierie & Consulting</strong> étudie votre message et vous contactera au <span className="font-bold text-[#CA9625]">{formData.phone}</span> sous 24h.
+                    Merci <span className="font-bold text-[#024E7E]">{formData.name || "cher client"}</span>. Un ingénieur de <strong>BGM Ingénierie & Construction</strong> étudie votre message et vous contactera au <span className="font-bold text-[#CA9625]">{formData.phone}</span> sous 24h.
                   </p>
                 </div>
 
