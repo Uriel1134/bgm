@@ -248,6 +248,71 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* 1.5. CHIFFRES CLÉS & BANDEAU DE IMPACT BGM */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full -mt-12 relative z-20">
+        <div className="bg-[#024E7E] text-white rounded-3xl p-8 sm:p-10 border-2 border-[#CA9625]/40 shadow-2xl space-y-6 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#CA9625]/10 rounded-full filter blur-3xl pointer-events-none" />
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 divide-y sm:divide-y-0 sm:divide-x divide-white/15">
+            {/* Stat 1 */}
+            <div className="space-y-2 pt-4 sm:pt-0 sm:pl-4 first:pl-0">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-[#CA9625]/20 border border-[#CA9625]/40 text-[#CA9625] flex items-center justify-center">
+                  <Compass className="w-5 h-5" />
+                </div>
+                <span className="text-4xl sm:text-5xl font-black font-heading gold-gradient-text tracking-tight">+150</span>
+              </div>
+              <h3 className="font-bold text-sm text-white pt-1">Projets & Plans 3D Conçus</h3>
+              <p className="text-xs text-slate-200 leading-relaxed font-medium">
+                Études d&apos;ingénierie de structure, calculs béton et modélisations 3D certifiées.
+              </p>
+            </div>
+
+            {/* Stat 2 */}
+            <div className="space-y-2 pt-4 sm:pt-0 sm:pl-6">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-[#CA9625]/20 border border-[#CA9625]/40 text-[#CA9625] flex items-center justify-center">
+                  <HardHat className="w-5 h-5" />
+                </div>
+                <span className="text-4xl sm:text-5xl font-black font-heading gold-gradient-text tracking-tight">+80</span>
+              </div>
+              <h3 className="font-bold text-sm text-white pt-1">Ouvrages BTP Livrés</h3>
+              <p className="text-xs text-slate-200 leading-relaxed font-medium">
+                Chantiers BTP gros œuvre et villas résidentielles livrés clés en main au Gabon.
+              </p>
+            </div>
+
+            {/* Stat 3 */}
+            <div className="space-y-2 pt-4 sm:pt-0 sm:pl-6">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-[#CA9625]/20 border border-[#CA9625]/40 text-[#CA9625] flex items-center justify-center">
+                  <FileCheck className="w-5 h-5" />
+                </div>
+                <span className="text-4xl sm:text-5xl font-black font-heading gold-gradient-text tracking-tight">100%</span>
+              </div>
+              <h3 className="font-bold text-sm text-white pt-1">Titres Fonciers Garantis</h3>
+              <p className="text-xs text-slate-200 leading-relaxed font-medium">
+                Propriétés et parcelles viabilisées avec garanties foncières et décennales.
+              </p>
+            </div>
+
+            {/* Stat 4 */}
+            <div className="space-y-2 pt-4 sm:pt-0 sm:pl-6">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-[#CA9625]/20 border border-[#CA9625]/40 text-[#CA9625] flex items-center justify-center">
+                  <Award className="w-5 h-5" />
+                </div>
+                <span className="text-4xl sm:text-5xl font-black font-heading gold-gradient-text tracking-tight">+12 ans</span>
+              </div>
+              <h3 className="font-bold text-sm text-white pt-1">Savoir-Faire & Confiance</h3>
+              <p className="text-xs text-slate-200 leading-relaxed font-medium">
+                Acteur majeur du BTP et du développement immobilier au Gabon.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 2. LES 4 PILIERS BGM (Architectural & Sober Design) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="space-y-10">
