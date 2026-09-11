@@ -1053,6 +1053,8 @@ export default function HomePage() {
                 </div>
 
                 <form
+                  method="POST"
+                  action="#"
                   onSubmit={(e) => {
                     e.preventDefault();
                     const target = e.target as HTMLFormElement;

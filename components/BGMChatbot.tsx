@@ -239,6 +239,8 @@ export const BGMChatbot: React.FC = () => {
 
           {/* Input Footer */}
           <form
+            method="POST"
+            action="#"
             onSubmit={handleSend}
             className="p-3 bg-[#024E7E] border-t border-[#CA9625]/30 flex items-center gap-2"
           >

@@ -157,6 +157,8 @@ export default function ContactPage() {
           <div className="lg:col-span-7">
             {!submitted ? (
               <form
+                method="POST"
+                action="#"
                 onSubmit={handleSubmit}
                 className="card-light-premium p-8 sm:p-10 rounded-3xl space-y-7 border border-slate-200/90 shadow-xl bg-white"
               >
