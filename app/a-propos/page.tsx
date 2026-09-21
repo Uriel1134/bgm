@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Award, ShieldCheck, Users, Phone, ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
 
@@ -17,40 +18,66 @@ export default function AboutPage() {
         </p>
       </div>
 
-      {/* MOT DU PDG / DIRECTION GÉNÉRALE */}
+      {/* MOT DU DIRECTEUR / DIRECTION GÉNÉRALE */}
       <section className="card-light-premium p-8 sm:p-12 space-y-8 shadow-xl">
         <div className="flex items-center gap-3 border-b border-slate-200 pb-4">
           <Award className="w-8 h-8 text-[#CA9625]" />
           <div>
-            <h2 className="text-2xl font-bold text-[#024E7E]">Mot du PDG / Direction Générale</h2>
+            <h2 className="text-2xl font-bold text-[#024E7E]">Mot du Directeur / Direction Générale</h2>
             <p className="text-xs text-[#CA9625] font-semibold uppercase tracking-wider">Message Institutionnel BGM</p>
           </div>
         </div>
 
-        <blockquote className="text-slate-700 text-base sm:text-lg leading-relaxed italic space-y-4 border-l-4 border-[#CA9625] pl-6">
-          <p>
-            &ldquo;Chez <strong>BGM Ingénierie & Construction</strong>, nous sommes animés par une conviction forte : bâtir est un acte d&apos;engagement durable envers l&apos;avenir. Notre mission va bien au-delà de la simple construction d&apos;édifices : nous concevons des cadres de vie harmonieux, modernes et pérennes pour les familles, les professionnels et les investisseurs au Gabon.&rdquo;
-          </p>
-          <p>
-            &ldquo;Qu&apos;il s&apos;agisse d&apos;une étude technique rigoureuse, d&apos;une modélisation architecturale 3D audacieuse, de la réalisation de chantiers complexes ou de la promotion de villas clés en main, nos équipes s&apos;investissent avec passion, professionnalisme et respect strict des normes de sécurité.&rdquo;
-          </p>
-          <p>
-            &ldquo;Ce site web vitrine constitue la vitrine numérique de notre savoir-faire. Il témoigne de notre exigence de qualité, de notre rigueur et de notre passion d&apos;accompagner chaque client dans la concrétisation de son rêve immobilier.&rdquo;
-          </p>
-        </blockquote>
-
-        <div className="pt-4 flex items-center justify-between border-t border-slate-200">
-          <div>
-            <p className="font-bold text-[#024E7E] text-base">La Direction Générale</p>
-            <p className="text-xs text-[#CA9625] font-semibold">BGM Ingénierie & Construction — Siège Lalala à droite, Libreville</p>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          {/* Photo du Directeur */}
+          <div className="lg:col-span-4 flex flex-col items-center">
+            <div className="relative w-full max-w-[280px] aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white ring-2 ring-[#CA9625]/40 group">
+              <Image
+                src="/images/IMG_20260918_095922480.jpg.jpeg"
+                alt="Directeur Général - BGM Ingénierie & Construction"
+                fill
+                className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 320px"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#024E7E]/85 via-transparent to-transparent opacity-80" />
+              <div className="absolute bottom-4 left-4 right-4 text-white text-center">
+                <span className="inline-block px-2.5 py-0.5 mb-1 text-[10px] font-bold uppercase tracking-wider bg-[#CA9625] text-white rounded-full">
+                  Direction Générale
+                </span>
+                <p className="font-bold text-sm text-white drop-shadow-md">Directeur Général</p>
+                <p className="text-[11px] text-amber-200">BGM Ingénierie & Construction</p>
+              </div>
+            </div>
           </div>
-          <a
-            href="tel:+241077167607"
-            className="btn-sunset-gradient px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2"
-          >
-            <Phone className="w-4 h-4" />
-            <span>(+241) 077 16 76 07</span>
-          </a>
+
+          {/* Citation & Contact */}
+          <div className="lg:col-span-8 space-y-6">
+            <blockquote className="text-slate-700 text-base sm:text-lg leading-relaxed italic space-y-4 border-l-4 border-[#CA9625] pl-6">
+              <p>
+                &ldquo;Chez <strong>BGM Ingénierie & Construction</strong>, nous sommes animés par une conviction forte : bâtir est un acte d&apos;engagement durable envers l&apos;avenir. Notre mission va bien au-delà de la simple construction d&apos;édifices : nous concevons des cadres de vie harmonieux, modernes et pérennes pour les familles, les professionnels et les investisseurs au Gabon.&rdquo;
+              </p>
+              <p>
+                &ldquo;Qu&apos;il s&apos;agisse d&apos;une étude technique rigoureuse, d&apos;une modélisation architecturale 3D audacieuse, de la réalisation de chantiers complexes ou de la promotion de villas clés en main, nos équipes s&apos;investissent avec passion, professionnalisme et respect strict des normes de sécurité.&rdquo;
+              </p>
+              <p>
+                &ldquo;Ce site web vitrine constitue la vitrine numérique de notre savoir-faire. Il témoigne de notre exigence de qualité, de notre rigueur et de notre passion d&apos;accompagner chaque client dans la concrétisation de son rêve immobilier.&rdquo;
+              </p>
+            </blockquote>
+
+            <div className="pt-4 flex flex-wrap items-center justify-between gap-4 border-t border-slate-200">
+              <div>
+                <p className="font-bold text-[#024E7E] text-base">La Direction Générale</p>
+                <p className="text-xs text-[#CA9625] font-semibold">BGM Ingénierie & Construction — Siège Lalala à droite, Libreville</p>
+              </div>
+              <a
+                href="tel:+241077167607"
+                className="btn-sunset-gradient px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2"
+              >
+                <Phone className="w-4 h-4" />
+                <span>(+241) 077 16 76 07</span>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -112,6 +112,46 @@ export default function HomePage() {
 
   const featuredProjects = [
     {
+      title: "Dossier Chantier : Travaux de Fondation & Béton Armé",
+      category: "Dossier Chantier BTP",
+      location: "Grand Libreville",
+      image: "/images/Fondation/FONDATION1.jpg",
+      specs: "6 Photos HD | Fouilles en rigoles | Ferraillage HA | Béton dosé 350 kg/m³",
+      status: "📁 Dossier Chantier (6 Photos)",
+    },
+    {
+      title: "Dossier Chantier : Maçonnerie & Élévation des Murs",
+      category: "Dossier Chantier BTP",
+      location: "Akanda / Libreville",
+      image: "/images/Maçonnerie/7f4RcAixvGrIFg3jjNY5sGf7Ahj7xzBzHCG3Z-vFCYE1T2aFzNiBmAg-Oid_x_NS0Ar0GNIJE99ZlkjRjadP3ksi4x4BUp_zkoeFOIrBx9GZtpQqPbYy--TzYj115HJrMQ_rdv8k8s5Gmq5H7uEBTt5sa8C0yTSG5r5Rw2oVFVMi5jCH-g8Wma-yT7eN56Em.jpg",
+      specs: "6 Photos HD | Agglos & Briques | Linteaux BA | Chaînages parasismiques",
+      status: "📁 Dossier Chantier (6 Photos)",
+    },
+    {
+      title: "Dossier Chantier : Terrassement & Nivellement Laser",
+      category: "Dossier Chantier BTP",
+      location: "Libreville — Gabon",
+      image: "/images/terrassement/Lnp3R1KxNQQNNqM9-krZXUMs92DF9Zls_RN-g_SfL2Zzs7h68aV1MiNpFCUIzw33rFnJxGcPQdrQYgUzBXT38o7il5R9ZSQ3Eu10vVKDzVjIFNJpcw8GfaYBJ0s_XJU0ESzL38_KD9Mjc7_R6Sl8jUrHzZG7xz3PXST3DzgZ1X_YQoYnhPXlFnnHblapOzc8.jpg",
+      specs: "6 Photos HD | Décapage terre végétale | Compactage mécanique | Plateforme",
+      status: "📁 Dossier Chantier (6 Photos)",
+    },
+    {
+      title: "Dossier Chantier : VRD — Voirie & Réseaux Divers",
+      category: "Dossier Chantier BTP",
+      location: "Libreville",
+      image: "/images/VRD — Voirie et Réseaux Divers/RAqtZ3cz6FIvZcx-qrAkwf-8-tMMv5HswaiJzAzzBleCoFNLEcHRxEpOKOuLLye8EfbZtsyn30NfOs_0TJjGfcuKYdeEAhYjVAFfw7sjy_1VB7shXW9Uwiq94Q3OSEON_-kG0x1OXTt59PfJXDqLlmyxs1qXLTsbNmSfQyhiJb0nC0bAFAuD2S9ef.jpg",
+      specs: "6 Photos HD | Caniveaux & Buses béton | Assainissement pluvial & Réseaux",
+      status: "📁 Dossier Chantier (6 Photos)",
+    },
+    {
+      title: "Dossier Chantier : Moyens Matériels & Parc d'Équipements",
+      category: "Dossier Chantier BTP",
+      location: "Parc Technique BGM",
+      image: "/images/Moyens matériels/BNBOG21nOz2vDeH9cIFI7igpaHjTVN2ueHjd-7jd0IfTexKO-aICgLazEnWFX9ZMFeMWio8HrBcvfu7vZuMs87YgeVVfd1wr6UbTjryZAgsK240302oMVH0eXJtDQCtOenlBVESvHKL8VHeg5OJ4oFQh6yvnEwBQXJ7j5xdWZBrO7xMnpOrYb4x2IuGXHSFW.jpg",
+      specs: "6 Photos HD | Bétonnières thermiques | Véhicules & Outillage de précision",
+      status: "📁 Dossier Chantier (6 Photos)",
+    },
+    {
       title: "Villa Contemporaine Begnamam avec Solarium",
       category: "Promotion Immobilière",
       location: "Akanda — Libreville",
@@ -134,14 +174,6 @@ export default function HomePage() {
       image: "/images/duplex_prestige_bgm.jpg",
       specs: "5 Chambres | Balcon Vitré R+1 | Carport | Eclairage LED",
       status: "Disponibilité Immédiate",
-    },
-    {
-      title: "Villa de Standing 'Begna Emeraude'",
-      category: "Réalisations BTP Clé en main",
-      location: "Okala — Libreville",
-      image: "/images/villa_plain_pied_carport.jpg",
-      specs: "3 Chambres | Garages Couverts | Jardin Gazonné | Clôture",
-      status: "Livrée avec Titre Foncier",
     },
   ];
 
@@ -418,11 +450,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. LE MOT DU PDG & VISION STRATÉGIQUE (Luminous Light Box) */}
+      {/* 4. LE MOT DU DIRECTEUR & VISION STRATÉGIQUE (Luminous Light Box) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="card-light-premium p-8 sm:p-12 space-y-8 shadow-xl">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="card-light-premium p-8 sm:p-12 shadow-xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            {/* Photo du Directeur */}
+            <div className="lg:col-span-4 flex flex-col items-center">
+              <div className="relative w-full max-w-[280px] aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white ring-2 ring-[#CA9625]/40 group">
+                <Image
+                  src="/images/IMG_20260918_095922480.jpg.jpeg"
+                  alt="Directeur Général - BGM Ingénierie & Construction"
+                  fill
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 320px"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#024E7E]/85 via-transparent to-transparent opacity-80" />
+                <div className="absolute bottom-4 left-4 right-4 text-white text-center">
+                  <span className="inline-block px-2.5 py-0.5 mb-1 text-[10px] font-bold uppercase tracking-wider bg-[#CA9625] text-white rounded-full">
+                    Direction Générale
+                  </span>
+                  <p className="font-bold text-sm text-white drop-shadow-md">Directeur Général</p>
+                  <p className="text-[11px] text-amber-200">BGM Ingénierie & Construction</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Texte & Citation */}
             <div className="lg:col-span-8 space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#CA9625]/10 border border-[#CA9625]/20 text-[#024E7E] text-xs font-bold uppercase tracking-wider">
+                <span className="w-2 h-2 rounded-full bg-[#CA9625]"></span>
+                Mot du Directeur
+              </div>
+
               <h2 className="text-2xl sm:text-3xl font-black font-heading text-[#024E7E]">
                 &ldquo;Bâtir est un acte d&apos;engagement durable envers l&apos;avenir du Gabon.&rdquo;
               </h2>
@@ -433,10 +492,25 @@ export default function HomePage() {
                 </p>
               </blockquote>
 
-              <div className="pt-4 flex items-center justify-between border-t border-slate-200">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs text-slate-700">
+                <div className="bg-[#F1F5F9] p-3 rounded-xl border border-slate-200 flex items-start gap-2">
+                  <MapPin className="w-4 h-4 text-[#CA9625] shrink-0 mt-0.5" />
+                  <span><strong>Siège :</strong> Lalala à droite, BP 15 406</span>
+                </div>
+                <div className="bg-[#F1F5F9] p-3 rounded-xl border border-slate-200 flex items-start gap-2">
+                  <Phone className="w-4 h-4 text-[#CA9625] shrink-0 mt-0.5" />
+                  <span><strong>Contact :</strong> (+241) 077 16 76 07</span>
+                </div>
+                <div className="bg-[#F1F5F9] p-3 rounded-xl border border-slate-200 flex items-start gap-2">
+                  <Clock className="w-4 h-4 text-[#CA9625] shrink-0 mt-0.5" />
+                  <span><strong>Disponibilité :</strong> Lun-Ven 08h-17h30</span>
+                </div>
+              </div>
+
+              <div className="pt-4 flex flex-wrap items-center justify-between gap-4 border-t border-slate-200">
                 <div>
                   <p className="font-bold text-[#024E7E] text-sm">La Direction Générale</p>
-                  <p className="text-xs text-[#CA9625] font-semibold">BGM Ingénierie & Construction — Siège Lalala à droite, Libreville</p>
+                  <p className="text-xs text-[#CA9625] font-semibold">BGM Ingénierie & Construction — Libreville</p>
                 </div>
                 <Link
                   href="/a-propos"
@@ -445,24 +519,6 @@ export default function HomePage() {
                   <span>Lire notre Vision</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-              </div>
-            </div>
-
-            <div className="lg:col-span-4 bg-[#F1F5F9] p-6 rounded-2xl border border-slate-200 space-y-4">
-              <h3 className="text-sm font-bold text-[#024E7E] border-b border-slate-300 pb-3">Informations Institutionnelles</h3>
-              <div className="space-y-3 text-xs text-slate-700">
-                <div className="flex items-start gap-2">
-                  <MapPin className="w-4 h-4 text-[#CA9625] shrink-0 mt-0.5" />
-                  <span><strong>Siège Social :</strong> Lalala à droite, BP 15 406 — Libreville</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Phone className="w-4 h-4 text-[#CA9625] shrink-0 mt-0.5" />
-                  <span><strong>Téléphone Direct :</strong> (+241) 077 16 76 07</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Clock className="w-4 h-4 text-[#CA9625] shrink-0 mt-0.5" />
-                  <span><strong>Horaires :</strong> Lun - Ven: 08h00 - 17h30</span>
-                </div>
               </div>
             </div>
           </div>
