@@ -469,7 +469,7 @@ export default function HomePage() {
                   <span className="inline-block px-2.5 py-0.5 mb-1 text-[10px] font-bold uppercase tracking-wider bg-[#CA9625] text-white rounded-full">
                     Direction Générale
                   </span>
-                  <p className="font-bold text-sm text-white drop-shadow-md">Directeur Général</p>
+                  <p className="font-bold text-sm text-white drop-shadow-md">Hugues-Sylvain ABESSOLO</p>
                   <p className="text-[11px] text-amber-200">BGM Ingénierie & Construction</p>
                 </div>
               </div>
