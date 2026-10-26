@@ -19,7 +19,18 @@ import {
   Compass,
   FileCheck,
   Building,
+  Play,
+  Video,
+  Calendar,
+  Users,
+  Film,
 } from "lucide-react";
+
+const isVideoUrl = (url?: string) => {
+  if (!url) return false;
+  const clean = url.split("?")[0].toLowerCase();
+  return clean.endsWith(".mp4") || clean.endsWith(".webm") || clean.endsWith(".mov");
+};
 
 export default function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -74,19 +85,124 @@ export default function ProjectsPage() {
 
   const categories = [
     { id: "all", name: "Tous les Projets" },
+    { id: "visites", name: "📍 Visites de Terrains (Okolassi & Akanda)" },
+    { id: "videos", name: "🎥 Vidéos In Situ" },
     { id: "chantiers", name: "📁 Dossiers Chantiers BTP" },
+    { id: "materre", name: "Programme « Ma Terre, Ma Maison »" },
+    { id: "villas", name: "Villas & Duplex" },
     { id: "fondation", name: "Fondations" },
     { id: "maconnerie", name: "Maçonnerie" },
     { id: "terrassement", name: "Terrassement" },
     { id: "vrd", name: "VRD & Réseaux" },
     { id: "materiel", name: "Moyens Matériels" },
-    { id: "materre", name: "Programme « Ma Terre, Ma Maison »" },
-    { id: "villas", name: "Villas & Duplex" },
     { id: "3d", name: "Conception 3D" },
     { id: "livres", name: "Réalisations Livrées" },
   ];
 
   const projects = [
+    {
+      id: "visite-officielle-sites",
+      title: "Visite Officielle des Sites de Construction — Okolassi (17 Oct.) & Akanda (18 Oct.)",
+      category: "visites",
+      parentCategory: "visites",
+      categoryName: "Visites Officielles de Terrains",
+      location: "Okolassi & Akanda — Grand Libreville, Gabon",
+      image: "/visites/images/photo-groupe-visite-okolassi-akanda.jpg",
+      isFolder: true,
+      gallery: [
+        "/visites/images/photo-groupe-visite-okolassi-akanda.jpg",
+        "/visites/images/visite-presentation-dg-bgm.jpg",
+        "/visites/images/visite-terrain-etude-plans-tablette.jpg",
+        "/visites/images/visite-terrain-akanda-inspection.jpg",
+        "/visites/images/visite-satisfaction-acquereurs.jpg",
+        "/visites/videos/video-visite-site-1.mp4",
+        "/visites/videos/video-visite-site-8.mp4",
+        "/visites/videos/video-visite-site-4.mp4",
+        "/visites/videos/video-visite-site-5.mp4",
+        "/visites/videos/video-visite-site-9.mp4",
+        "/visites/videos/video-visite-site-3.mp4",
+        "/visites/videos/video-visite-site-6.mp4",
+        "/visites/videos/video-visite-site-7.mp4",
+        "/visites/videos/video-visite-site-2.mp4",
+      ],
+      specs: "17 & 18 Octobre 2026 | DG de BGM & Représentants de Sites | Futurs Acquéreurs | 5 Photos HD & 9 Vidéos In Situ",
+      status: "Sites Validés • Démarrage Chantiers",
+      description: "Visites officielles de terrain organisées par BGM Ingénierie & Construction sur les deux sites retenus pour l'édification des futurs logements : le site d'Okolassi le samedi 17 octobre et le site d'Akanda le dimanche 18 octobre. La délégation était composée du Directeur Général de BGM, d'un représentant officiel de chacun des sites visités et des futurs acquéreurs des futurs logements. Au programme : inspection approfondie des emprises foncières, vérification des voies d'accès aménagées et présentation sur tablette tactile des plans de masse et des futures villas.",
+      architectNote: "Assise foncière certifiée, excellente portance des sols et adhésion totale des futurs propriétaires ayant pu visualiser concrètement l'emplacement de leurs logements.",
+    },
+    {
+      id: "visite-okolassi-17-octobre",
+      title: "Site de Construction d'Okolassi — Visite Officielle du Samedi 17 Octobre",
+      category: "visites",
+      parentCategory: "visites",
+      categoryName: "Site d'Okolassi • Futurs Logements BGM",
+      location: "Okolassi — Grand Libreville, Gabon",
+      image: "/visites/images/visite-presentation-dg-bgm.jpg",
+      isFolder: true,
+      gallery: [
+        "/visites/images/visite-presentation-dg-bgm.jpg",
+        "/visites/images/photo-groupe-visite-okolassi-akanda.jpg",
+        "/visites/images/visite-satisfaction-acquereurs.jpg",
+        "/visites/videos/video-visite-site-1.mp4",
+        "/visites/videos/video-visite-site-2.mp4",
+        "/visites/videos/video-visite-site-3.mp4",
+        "/visites/videos/video-visite-site-4.mp4",
+        "/visites/videos/video-visite-site-9.mp4",
+      ],
+      specs: "Samedi 17 Octobre 2026 | DG BGM, Représentant Okolassi & Acquéreurs | Plateforme & Bornage validés | 5 Vidéos HD",
+      status: "Site Validé • Chantiers à Venir",
+      description: "Reconnaissance in situ du site de construction d'Okolassi le samedi 17 octobre 2026. Le Directeur Général de BGM et le représentant officiel du site d'Okolassi ont guidé les futurs acquéreurs sur le terrain. Présentation des emprises de construction, du découpage des parcelles résidentielles, des raccordements prévus et des garanties juridiques et techniques assurées par BGM.",
+      architectNote: "Topographie plane idéale pour les fondations, voies d'accès carrossables prêtes pour l'acheminement des matériaux et le déploiement des équipes BTP.",
+    },
+    {
+      id: "visite-akanda-18-octobre",
+      title: "Site de Construction d'Akanda — Visite Officielle du Dimanche 18 Octobre",
+      category: "visites",
+      parentCategory: "visites",
+      categoryName: "Site d'Akanda • Futurs Logements BGM",
+      location: "Akanda — Grand Libreville, Gabon",
+      image: "/visites/images/visite-terrain-akanda-inspection.jpg",
+      isFolder: true,
+      gallery: [
+        "/visites/images/visite-terrain-akanda-inspection.jpg",
+        "/visites/images/visite-terrain-etude-plans-tablette.jpg",
+        "/visites/images/photo-groupe-visite-okolassi-akanda.jpg",
+        "/visites/images/visite-satisfaction-acquereurs.jpg",
+        "/visites/videos/video-visite-site-5.mp4",
+        "/visites/videos/video-visite-site-6.mp4",
+        "/visites/videos/video-visite-site-7.mp4",
+        "/visites/videos/video-visite-site-8.mp4",
+      ],
+      specs: "Dimanche 18 Octobre 2026 | DG BGM, Représentant Akanda & Acquéreurs | Voirie aménagée | Étude sur tablette | 5 Vidéos HD",
+      status: "Site Validé • Chantiers à Venir",
+      description: "Visite de terrain sur le site d'Akanda effectuée le dimanche 18 octobre 2026. Aux côtés du Directeur Général de BGM et du représentant officiel du site d'Akanda, les futurs acquéreurs ont pu constater l'état d'avancement des voiries aménagées avec bordures et assainissement, visualiser les plans 3D et le plan masse sur tablette tactile directement sur site, et choisir l'orientation de leurs futures maisons.",
+      architectNote: "Zone résidentielle d'Akanda très recherchée, viabilisation avancée avec voirie bitumée garantissant une valorisation patrimoniale immédiate.",
+    },
+    {
+      id: "videotheque-visites-terrains",
+      title: "Vidéothèque Terrains : Les 9 Vidéos In Situ des Visites d'Okolassi & Akanda",
+      category: "videos",
+      parentCategory: "visites",
+      categoryName: "Reportages Vidéos In Situ",
+      location: "Okolassi & Akanda — Grand Libreville, Gabon",
+      image: "/visites/images/visite-terrain-etude-plans-tablette.jpg",
+      isFolder: true,
+      gallery: [
+        "/visites/videos/video-visite-site-1.mp4",
+        "/visites/videos/video-visite-site-8.mp4",
+        "/visites/videos/video-visite-site-4.mp4",
+        "/visites/videos/video-visite-site-5.mp4",
+        "/visites/videos/video-visite-site-9.mp4",
+        "/visites/videos/video-visite-site-3.mp4",
+        "/visites/videos/video-visite-site-6.mp4",
+        "/visites/videos/video-visite-site-7.mp4",
+        "/visites/videos/video-visite-site-2.mp4",
+      ],
+      specs: "9 Vidéos In Situ Complètes | Explications DG BGM | Échanges Acquéreurs | Visite Complète des 2 Sites",
+      status: "9 Vidéos HD Disponibles en Lecture",
+      description: "Retrouvez en vidéo l'intégralité des moments forts des visites des sites d'Okolassi (17 octobre) et d'Akanda (18 octobre) : allocution et présentations techniques du Directeur Général de BGM, exploration des parcelles avec les représentants locaux, réactions et enthousiasme des futurs acquéreurs de logements.",
+      architectNote: "Une démarche de transparence absolue de BGM Ingénierie & Construction, illustrée par des images et vidéos réelles prises sur le vif.",
+    },
     {
       id: "folder-fondation",
       title: "Dossier Chantier : Travaux de Fondation & Béton Armé",
@@ -310,12 +426,24 @@ export default function ProjectsPage() {
   const filteredProjects =
     activeCategory === "all"
       ? projects
+      : activeCategory === "visites"
+      ? projects.filter(
+          (p) => p.category === "visites" || p.parentCategory === "visites"
+        )
+      : activeCategory === "videos"
+      ? projects.filter(
+          (p) =>
+            p.category === "videos" ||
+            (p.gallery && p.gallery.some((m) => isVideoUrl(m)))
+        )
       : activeCategory === "chantiers"
       ? projects.filter(
           (p) =>
-            p.parentCategory === "chantiers" ||
-            p.category === "chantiers" ||
-            p.isFolder
+            (p.parentCategory === "chantiers" ||
+              p.category === "chantiers" ||
+              p.isFolder) &&
+            p.category !== "visites" &&
+            p.category !== "videos"
         )
       : projects.filter((p) => p.category === activeCategory);
 
@@ -378,6 +506,100 @@ export default function ProjectsPage() {
           </p>
         </div>
 
+        {/* Official Site Visits Event Announcement Card */}
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#024E7E] via-[#033758] to-[#041E33] text-white p-6 sm:p-8 lg:p-10 shadow-2xl border border-[#CA9625]/30 max-w-6xl mx-auto">
+          {/* Subtle gold decorative glow */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#CA9625]/15 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#024E7E]/40 rounded-full blur-2xl pointer-events-none" />
+
+          <div className="relative z-10 space-y-6">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#CA9625]/20 border border-[#CA9625]/40 text-[#E8B94B] text-xs font-bold uppercase tracking-wider">
+                <span className="w-2 h-2 rounded-full bg-[#CA9625] animate-pulse"></span>
+                <span>Visites Officielles de Terrain • BGM Ingénierie & Construction</span>
+              </div>
+              <span className="text-xs text-slate-300 font-mono font-medium">
+                17 & 18 Octobre 2026 • Grand Libreville
+              </span>
+            </div>
+
+            <div className="space-y-3">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black font-heading tracking-tight text-white">
+                Visites des Futurs Sites de Construction : <span className="text-[#E8B94B]">Okolassi</span> & <span className="text-[#E8B94B]">Akanda</span>
+              </h2>
+              <p className="text-sm sm:text-base text-slate-200 leading-relaxed font-medium max-w-4xl">
+                BGM a franchi une étape décisive pour l&apos;édification des futurs logements. La visite du site d&apos;<strong className="text-white">Okolassi</strong> s&apos;est tenue le <strong className="text-[#E8B94B]">samedi 17 octobre</strong>, suivie de celle d&apos;<strong className="text-white">Akanda</strong> le <strong className="text-[#E8B94B]">dimanche 18 octobre</strong>. La délégation était composée du <strong className="text-white">Directeur Général de BGM</strong>, d&apos;un représentant de chacun des sites visités et des <strong className="text-white">futurs acquéreurs des futurs logements</strong>. Au programme : inspection des emprises, échange direct avec les acquéreurs et présentation des plans 3D in situ.
+              </p>
+            </div>
+
+            {/* Key delegation & media highlights */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+              <div className="p-3.5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15">
+                <div className="flex items-center gap-2 text-[#E8B94B] text-xs font-bold uppercase tracking-wider mb-1">
+                  <Calendar className="w-4 h-4 shrink-0" />
+                  <span>Dates Clés</span>
+                </div>
+                <p className="text-xs font-semibold text-white">17 & 18 Octobre 2026</p>
+                <p className="text-[11px] text-slate-300">Okolassi & Akanda</p>
+              </div>
+
+              <div className="p-3.5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15">
+                <div className="flex items-center gap-2 text-[#E8B94B] text-xs font-bold uppercase tracking-wider mb-1">
+                  <Users className="w-4 h-4 shrink-0" />
+                  <span>Délégation</span>
+                </div>
+                <p className="text-xs font-semibold text-white">DG BGM & Représentants</p>
+                <p className="text-[11px] text-slate-300">Avec futurs acquéreurs</p>
+              </div>
+
+              <div className="p-3.5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15">
+                <div className="flex items-center gap-2 text-[#E8B94B] text-xs font-bold uppercase tracking-wider mb-1">
+                  <MapPin className="w-4 h-4 shrink-0" />
+                  <span>2 Sites Validés</span>
+                </div>
+                <p className="text-xs font-semibold text-white">Okolassi & Akanda</p>
+                <p className="text-[11px] text-slate-300">Voiries & Emprises prêtes</p>
+              </div>
+
+              <div className="p-3.5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15">
+                <div className="flex items-center gap-2 text-[#E8B94B] text-xs font-bold uppercase tracking-wider mb-1">
+                  <Film className="w-4 h-4 shrink-0" />
+                  <span>Médias In Situ</span>
+                </div>
+                <p className="text-xs font-semibold text-white">5 Photos HD & 9 Vidéos</p>
+                <p className="text-[11px] text-slate-300">Reportages complets</p>
+              </div>
+            </div>
+
+            {/* Quick Filter CTAs */}
+            <div className="flex flex-wrap items-center gap-3 pt-2">
+              <button
+                onClick={() => {
+                  setActiveCategory("visites");
+                  setSelectedProjectIndex(null);
+                  setSelectedPhotoIndex(0);
+                }}
+                className="btn-sunset-gradient px-5 py-3 rounded-2xl text-xs font-bold flex items-center gap-2 shadow-lg hover:scale-105 transition-transform"
+              >
+                <MapPin className="w-4 h-4 text-[#024E7E]" />
+                <span>Voir les Dossiers des 2 Visites (Okolassi & Akanda)</span>
+              </button>
+
+              <button
+                onClick={() => {
+                  setActiveCategory("videos");
+                  setSelectedProjectIndex(null);
+                  setSelectedPhotoIndex(0);
+                }}
+                className="bg-white/15 hover:bg-white/25 text-white px-5 py-3 rounded-2xl text-xs font-bold flex items-center gap-2 border border-white/20 transition-all hover:scale-105"
+              >
+                <Play className="w-4 h-4 text-[#E8B94B] fill-[#E8B94B]" />
+                <span>Consulter la Vidéothèque des 9 Vidéos de Terrain</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
         {/* Filter Navigation Pill Bar */}
         <div className="flex items-center justify-center flex-wrap gap-2 max-w-5xl mx-auto">
           {categories.map((cat) => (
@@ -427,7 +649,7 @@ export default function ProjectsPage() {
 
                 {filteredProjects[0].gallery && (
                   <div className="absolute bottom-4 left-4 px-3 py-1.5 rounded-xl bg-black/70 backdrop-blur-md text-white text-[11px] font-bold border border-white/20 flex items-center gap-1.5">
-                    <span>📁 Galerie : {filteredProjects[0].gallery.length} photos HD</span>
+                    <span>📁 Galerie : {filteredProjects[0].gallery.length} médias (photos & vidéos)</span>
                   </div>
                 )}
 
@@ -471,20 +693,41 @@ export default function ProjectsPage() {
                   {/* Preview Thumbnails if folder */}
                   {filteredProjects[0].gallery && (
                     <div className="space-y-2 pt-1">
-                      <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Aperçu du dossier ({filteredProjects[0].gallery.length} photos) :</p>
+                      <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Aperçu du dossier ({filteredProjects[0].gallery.length} médias) :</p>
                       <div className="flex items-center gap-2 overflow-x-auto pb-1">
-                        {filteredProjects[0].gallery.map((imgUrl, thumbIdx) => (
-                          <button
-                            key={thumbIdx}
-                            onClick={() => {
-                              setSelectedProjectIndex(0);
-                              setSelectedPhotoIndex(thumbIdx);
-                            }}
-                            className="relative w-14 h-14 rounded-xl overflow-hidden shrink-0 border-2 border-slate-200 hover:border-[#CA9625] transition-all hover:scale-105"
-                          >
-                            <Image src={imgUrl} alt={`Photo ${thumbIdx + 1}`} fill className="object-cover" />
-                          </button>
-                        ))}
+                        {filteredProjects[0].gallery.map((imgUrl, thumbIdx) => {
+                          const isVid = isVideoUrl(imgUrl);
+                          return (
+                            <button
+                              key={thumbIdx}
+                              onClick={() => {
+                                setSelectedProjectIndex(0);
+                                setSelectedPhotoIndex(thumbIdx);
+                              }}
+                              className="relative w-14 h-14 rounded-xl overflow-hidden shrink-0 border-2 border-slate-200 hover:border-[#CA9625] transition-all hover:scale-105 bg-slate-900"
+                              title={isVid ? `Vidéo ${thumbIdx + 1}` : `Photo ${thumbIdx + 1}`}
+                            >
+                              {isVid ? (
+                                <div className="relative w-full h-full flex items-center justify-center bg-slate-950">
+                                  <video
+                                    src={`${imgUrl}#t=0.5`}
+                                    preload="metadata"
+                                    className="w-full h-full object-cover pointer-events-none opacity-70"
+                                    muted
+                                    playsInline
+                                  />
+                                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                                    <div className="w-5 h-5 rounded-full bg-[#CA9625] text-[#024E7E] flex items-center justify-center shadow">
+                                      <Play className="w-2.5 h-2.5 fill-current ml-0.5" />
+                                    </div>
+                                  </div>
+                                </div>
+                              ) : (
+                                <Image src={imgUrl} alt={`Photo ${thumbIdx + 1}`} fill className="object-cover" />
+                              )}
+                            </button>
+                          );
+                        })}
                       </div>
                     </div>
                   )}
@@ -546,7 +789,7 @@ export default function ProjectsPage() {
 
                       {project.gallery && (
                         <div className="absolute bottom-4 left-4 px-3 py-1.5 rounded-xl bg-black/70 backdrop-blur-md text-white text-[11px] font-bold border border-white/20 flex items-center gap-1.5">
-                          <span>📁 Album : {project.gallery.length} photos</span>
+                          <span>📁 Album : {project.gallery.length} médias</span>
                         </div>
                       )}
 
@@ -586,20 +829,41 @@ export default function ProjectsPage() {
                       {/* Mini Thumbnails for Folders */}
                       {project.gallery && (
                         <div className="space-y-2 pt-1 border-t border-slate-100">
-                          <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Photos du chantier ({project.gallery.length}) :</p>
+                          <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Médias du dossier ({project.gallery.length}) :</p>
                           <div className="flex items-center gap-2 overflow-x-auto pb-1">
-                            {project.gallery.map((imgUrl, thumbIdx) => (
-                              <button
-                                key={thumbIdx}
-                                onClick={() => {
-                                  setSelectedProjectIndex(actualIndex);
-                                  setSelectedPhotoIndex(thumbIdx);
-                                }}
-                                className="relative w-12 h-12 rounded-xl overflow-hidden shrink-0 border-2 border-slate-200 hover:border-[#CA9625] transition-all hover:scale-105"
-                              >
-                                <Image src={imgUrl} alt={`Photo ${thumbIdx + 1}`} fill className="object-cover" />
-                              </button>
-                            ))}
+                            {project.gallery.map((imgUrl, thumbIdx) => {
+                              const isVid = isVideoUrl(imgUrl);
+                              return (
+                                <button
+                                  key={thumbIdx}
+                                  onClick={() => {
+                                    setSelectedProjectIndex(actualIndex);
+                                    setSelectedPhotoIndex(thumbIdx);
+                                  }}
+                                  className="relative w-12 h-12 rounded-xl overflow-hidden shrink-0 border-2 border-slate-200 hover:border-[#CA9625] transition-all hover:scale-105 bg-slate-900"
+                                  title={isVid ? `Vidéo ${thumbIdx + 1}` : `Photo ${thumbIdx + 1}`}
+                                >
+                                  {isVid ? (
+                                    <div className="relative w-full h-full flex items-center justify-center bg-slate-950">
+                                      <video
+                                        src={`${imgUrl}#t=0.5`}
+                                        preload="metadata"
+                                        className="w-full h-full object-cover pointer-events-none opacity-70"
+                                        muted
+                                        playsInline
+                                      />
+                                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                                        <div className="w-4 h-4 rounded-full bg-[#CA9625] text-[#024E7E] flex items-center justify-center shadow">
+                                          <Play className="w-2 h-2 fill-current ml-0.5" />
+                                        </div>
+                                      </div>
+                                    </div>
+                                  ) : (
+                                    <Image src={imgUrl} alt={`Média ${thumbIdx + 1}`} fill className="object-cover" />
+                                  )}
+                                </button>
+                              );
+                            })}
                           </div>
                         </div>
                       )}
@@ -649,12 +913,16 @@ export default function ProjectsPage() {
         >
           {/* Ambient Blurred Background from Active Photo for Immersion */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
-            <Image
-              src={currentActiveImage}
-              alt="Backdrop glow"
-              fill
-              className="object-cover filter blur-[90px] scale-125 opacity-25"
-            />
+            {!isVideoUrl(currentActiveImage) ? (
+              <Image
+                src={currentActiveImage}
+                alt="Backdrop glow"
+                fill
+                className="object-cover filter blur-[90px] scale-125 opacity-25"
+              />
+            ) : (
+              <div className="w-full h-full bg-gradient-to-br from-[#024E7E]/40 via-[#CA9625]/20 to-[#040D1A]" />
+            )}
             <div className="absolute inset-0 bg-gradient-to-t from-[#040D1A] via-transparent to-[#040D1A]/80" />
           </div>
 
@@ -665,13 +933,22 @@ export default function ProjectsPage() {
           >
             {/* Project & Photo Metadata */}
             <div className="flex items-center gap-2 sm:gap-4 min-w-0 flex-1 mr-2">
-              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-black tracking-wider bg-gradient-to-r from-[#CA9625] to-[#E8B94B] text-[#024E7E] shadow-md shrink-0">
-                <Sparkles className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-[#024E7E]" />
-                <span>
-                  {activeProject.gallery
-                    ? `${selectedPhotoIndex + 1}/${activeProject.gallery.length}`
-                    : `${selectedProjectIndex + 1}/${filteredProjects.length}`}
-                </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] sm:text-xs font-black tracking-wider bg-gradient-to-r from-[#CA9625] to-[#E8B94B] text-[#024E7E] shadow-md shrink-0">
+                {isVideoUrl(currentActiveImage) ? (
+                  <>
+                    <Video className="w-3 h-3 text-[#024E7E]" />
+                    <span>Vidéo {selectedPhotoIndex + 1}/{activeProject.gallery?.length || 1}</span>
+                  </>
+                ) : (
+                  <>
+                    <Sparkles className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-[#024E7E]" />
+                    <span>
+                      {activeProject.gallery
+                        ? `${selectedPhotoIndex + 1}/${activeProject.gallery.length}`
+                        : `${selectedProjectIndex + 1}/${filteredProjects.length}`}
+                    </span>
+                  </>
+                )}
               </span>
 
               <div className="min-w-0 flex-1">
@@ -749,22 +1026,35 @@ export default function ProjectsPage() {
               <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 transition-transform group-hover:-translate-x-0.5" />
             </button>
 
-            {/* Central Photo Display Card */}
-            <div className="relative w-full h-[52vh] sm:h-[58vh] max-w-5xl flex items-center justify-center">
-              <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-[0_15px_50px_rgba(0,0,0,0.85)] border border-white/15 ring-1 ring-white/10 bg-black/40">
-                <Image
-                  src={currentActiveImage}
-                  alt={activeProject.title}
-                  fill
-                  quality={100}
-                  unoptimized
-                  priority
-                  className={`transition-all duration-300 ${
-                    fitMode === "contain"
-                      ? "object-contain"
-                      : "object-cover"
-                  }`}
-                />
+            {/* Central Photo/Video Display Card */}
+            <div className="relative w-full h-[52vh] sm:h-[62vh] max-w-5xl flex items-center justify-center">
+              <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-[0_15px_50px_rgba(0,0,0,0.85)] border border-white/15 ring-1 ring-white/10 bg-black/60 flex items-center justify-center">
+                {isVideoUrl(currentActiveImage) ? (
+                  <video
+                    key={currentActiveImage}
+                    src={currentActiveImage}
+                    controls
+                    autoPlay
+                    playsInline
+                    className="w-full h-full max-h-full object-contain"
+                  >
+                    Votre navigateur ne prend pas en charge la lecture de vidéos.
+                  </video>
+                ) : (
+                  <Image
+                    src={currentActiveImage}
+                    alt={activeProject.title}
+                    fill
+                    quality={100}
+                    unoptimized
+                    priority
+                    className={`transition-all duration-300 ${
+                      fitMode === "contain"
+                        ? "object-contain"
+                        : "object-cover"
+                    }`}
+                  />
+                )}
               </div>
             </div>
 
@@ -798,25 +1088,43 @@ export default function ProjectsPage() {
             {/* Interactive Thumbnails Ribbon */}
             {activeProject.gallery && activeProject.gallery.length > 1 && (
               <div className="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto py-0.5 scrollbar-none">
-                {activeProject.gallery.map((img, idx) => {
+                {activeProject.gallery.map((mediaUrl, idx) => {
                   const isActive = selectedPhotoIndex === idx;
+                  const isVid = isVideoUrl(mediaUrl);
                   return (
                     <button
                       key={idx}
                       onClick={() => setSelectedPhotoIndex(idx)}
-                      className={`relative w-11 h-11 sm:w-16 sm:h-16 rounded-xl overflow-hidden shrink-0 transition-all duration-200 ${
+                      className={`relative w-11 h-11 sm:w-16 sm:h-16 rounded-xl overflow-hidden shrink-0 transition-all duration-200 bg-slate-900 ${
                         isActive
                           ? "ring-2 ring-[#CA9625] ring-offset-2 ring-offset-[#040D1A] scale-105 shadow-md shadow-[#CA9625]/30 border-2 border-white"
-                          : "opacity-50 hover:opacity-100 border border-white/20"
+                          : "opacity-60 hover:opacity-100 border border-white/20"
                       }`}
+                      title={isVid ? `Vidéo ${idx + 1}` : `Photo ${idx + 1}`}
                     >
-                      <Image
-                        src={img}
-                        alt={`Photo ${idx + 1}`}
-                        fill
-                        className="object-cover"
-                      />
-                      <span className="absolute bottom-0.5 right-1 text-[8px] sm:text-[9px] font-mono font-bold bg-black/80 px-1 rounded text-white">
+                      {isVid ? (
+                        <div className="relative w-full h-full flex items-center justify-center bg-slate-950">
+                          <video
+                            src={`${mediaUrl}#t=0.5`}
+                            preload="metadata"
+                            className="w-full h-full object-cover pointer-events-none opacity-70"
+                            muted
+                            playsInline
+                          />
+                          <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                            <Play className="w-3.5 h-3.5 text-[#CA9625] fill-[#CA9625]" />
+                          </div>
+                        </div>
+                      ) : (
+                        <Image
+                          src={mediaUrl}
+                          alt={`Média ${idx + 1}`}
+                          fill
+                          className="object-cover"
+                        />
+                      )}
+                      <span className="absolute bottom-0.5 right-1 text-[8px] sm:text-[9px] font-mono font-bold bg-black/80 px-1 rounded text-white flex items-center gap-0.5">
+                        {isVid && <Film className="w-2 h-2 text-[#CA9625]" />}
                         {idx + 1}
                       </span>
                     </button>
